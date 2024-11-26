@@ -7,7 +7,7 @@
 The schemas for creating the six tables in the data base can be found in [`schema.sql`](EmployeeSQL/schema.sql).
 
 - The Tables are named as follows departments,salaries,employees,dept_manager,dept_emp,titles.
--  `dept_no` and `title_id`/`emp_title_id` and `sex` are VARCHARs.
+-  `dept_no` and `title_id`/`emp_title_id` and `gender` are VARCHARs.
 - All other strings are TEXT because they could have a variable length.
 - Two of the tables(dept_manager,dept_emp) have composite primary keys since there is no single unique column
 
