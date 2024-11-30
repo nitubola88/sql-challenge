@@ -45,9 +45,8 @@ CREATE TABLE dept_manager(
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 CREATE TABLE salaries(
-	emp_no INT NOT NULL,
-    salary INT NOT NULL,
-    PRIMARY KEY (emp_no, salary),
-    FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+	emp_no INT PRIMARY KEY,
+    salary INT NOT NULL
+FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 

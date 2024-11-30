@@ -24,7 +24,8 @@ FROM
 JOIN 
     dept_manager dm ON e.emp_no = dm.emp_no
 JOIN 
-    departments d ON dm.dept_no = d.dept_no;
+    departments d ON dm.dept_no = d.dept_no
+	ORDER BY d.dept_name;
 	--24 results
 
 
@@ -42,7 +43,8 @@ FROM
 JOIN 
     dept_emp de ON e.emp_no = de.emp_no
 JOIN 
-    departments d ON de.dept_no = d.dept_no;
+    departments d ON de.dept_no = d.dept_no
+	ORDER BY d.dept_name;
 	    -- 331,603 results
 
 
@@ -66,7 +68,7 @@ JOIN
     dept_emp de ON e.emp_no = de.emp_no
 JOIN 
     departments d ON de.dept_no = d.dept_no
-WHERE d.dept_name='Sales';
+WHERE d.dept_name='Sales' ORDER BY e.last_name;
     	-- 52,245 results
 
 --7.List each employee in the Sales and Development departments,
@@ -82,7 +84,8 @@ JOIN
     dept_emp de ON e.emp_no = de.emp_no
 JOIN 
     departments d ON de.dept_no = d.dept_no
-	WHERE d.dept_name='Sales' OR d.dept_name='Development';		
+	WHERE d.dept_name IN ('Sales','Development')
+	ORDER BY d.dept_name, e.last_name;;		
 		-- 137,952 results
 
 --8.List the frequency counts, in descending order,of all the employee last names .
